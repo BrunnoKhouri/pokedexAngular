@@ -1,3 +1,30 @@
-<mat-card>
-<h3>{{pokemon?.name}}</h3>
+<mat-card [ngClass]="{    
+    'card-grass': this.pokeType.type.name == 'grass',
+    'card-fire': this.pokeType.type.name == 'fire',
+    'card-water': this.pokeType.type.name == 'water',
+    'card-poison': this.pokeType.type.name == 'poison',
+    'card-bug': this.pokeType.type.name == 'bug',
+    'card-flying': this.pokeType.type.name == 'flying',
+    'card-normal': this.pokeType.type.name == 'normal',
+    'card-electric': this.pokeType.type.name == 'electric',
+    'card-ground': this.pokeType.type.name == 'ground'
+}">
+    <section class="content-card" [ngClass]="{
+        'grass': this.pokeType.type.name == 'grass',
+        'fire': this.pokeType.type.name == 'fire',
+        'water': this.pokeType.type.name == 'water',
+        'bug': this.pokeType.type.name == 'bug',
+        'poison': this.pokeType.type.name == 'poison',
+        'flying': this.pokeType.type.name == 'flying',
+        'normal': this.pokeType.type.name == 'normal',
+        'electric': this.pokeType.type.name == 'electric',
+        'ground': this.pokeType.type.name == 'ground'
+            }">
+        <div class="content-img">
+            <img [src]="pokemon.sprites?.front_default" [alt]="pokemon.name">
+        </div>
+        <h3>{{pokemon?.name}}</h3>
+         <!-- <span *ngFor="let type of pokemon.types">{{type.type.name}}</span>  -->
+    </section>
 </mat-card>
+

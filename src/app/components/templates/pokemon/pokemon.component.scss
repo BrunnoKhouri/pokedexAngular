@@ -1,0 +1,107 @@
+mat-card {
+    width: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.content-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    padding: 10px;
+
+    h3{
+        color: #000;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+    }
+}
+
+.content-img {
+    background-color: #ffffff99;
+    border-radius: 100%;
+}
+
+
+
+
+//types pokemons
+
+.card-grass{
+    background-color: #60c48db8;
+}
+
+.grass{
+    background-image: linear-gradient(#d7f9e9, #8ad5b4);
+}
+
+.card-water{
+    background-color: #78a2fcd1;
+}
+.water{
+    background-image: linear-gradient(#dde7fc, #95b4f8);
+}
+
+.card-fire{
+    background-color: #ff3333ed;
+}
+.fire {
+    background-image: linear-gradient(#fadbc4, #ff33339e);
+}
+
+.card-bug{
+    background-color: #ffda33ed;
+}
+.bug {
+    background-image: linear-gradient(#faf2c4, #ffda33ed);
+}
+
+.card-bug{
+    background-color: #ffa733ed;
+}
+.bug {
+    background-image: linear-gradient(#fae1c4, #ffa733ed);
+}
+
+.card-poison{
+    background-color: #be33ffed;
+}
+.poison {
+    background-image: linear-gradient(#dbc4fa, #be33ffe8);
+}
+
+.card-flying{
+    background-color: #3ca3f8ed;
+}
+.flying {
+    background-image: linear-gradient(#d9c4fa, #3ca3f8ed);
+}
+
+.card-normal{
+    background-color: #c0f636;
+}
+.normal {
+    background-image: linear-gradient(#faf9c4, #cbf83ce0);
+}
+
+.card-electric{
+    background-color: #ffda33ed;
+}
+.electric {
+    background-image: linear-gradient(#faf2c4, #ffda33ed);
+}
+
+.card-ground{
+    background-color: #8d5914da;
+}
+.ground {
+    background-image: linear-gradient(#faf2c4, #8d5914da);
+}
+// .fire-flying{normal electric ground
+//     background-image: linear-gradient(#fadbc4, #338bff9e);
+// }

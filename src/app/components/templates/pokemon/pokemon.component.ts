@@ -1,4 +1,4 @@
-import { Pokemon } from './../../models/pokemon.model';
+import { Pokemon, Type } from './../../models/pokemon.model';
 import { PokemonList } from './../../models/pokemon.list';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
@@ -13,7 +13,14 @@ export class PokemonComponent implements OnInit {
 
   @Input() pokemon: Pokemon;
 
+  pokeType;
+
   ngOnInit(): void {
+    this.filterType()
+
   }
 
+  filterType() {
+    this.pokeType = this.pokemon.types.find(obj => obj.type.name);
+  }
 }

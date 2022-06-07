@@ -30,7 +30,7 @@ class Species {
   url: string;
 }
 
-class Type {
+export class Type {
   slot: number;
   type: {
       name: string;
