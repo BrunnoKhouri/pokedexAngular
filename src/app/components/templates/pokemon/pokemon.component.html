@@ -1,4 +1,4 @@
-<mat-card [ngClass]="{    
+<mat-card [ngClass]="{
     'card-grass': this.pokeType.type.name == 'grass',
     'card-fire': this.pokeType.type.name == 'fire',
     'card-water': this.pokeType.type.name == 'water',
@@ -11,7 +11,8 @@
 }">
     <section class="content-card" [ngClass]="{
         'grass': this.pokeType.type.name == 'grass',
-        'fire': this.pokeType.type.name == 'fire',
+        'fire': this.setClass('fire'),
+        'fire-flying': this.setClass('fire', 'flying'),
         'water': this.pokeType.type.name == 'water',
         'bug': this.pokeType.type.name == 'bug',
         'poison': this.pokeType.type.name == 'poison',
@@ -24,7 +25,7 @@
             <img [src]="pokemon.sprites?.front_default" [alt]="pokemon.name">
         </div>
         <h3>{{pokemon?.name}}</h3>
-         <!-- <span *ngFor="let type of pokemon.types">{{type.type.name}}</span>  -->
+         <!-- <span *ngFor="let type of pokemon.types">{{type.type.name}}</span> -->
     </section>
 </mat-card>
 
