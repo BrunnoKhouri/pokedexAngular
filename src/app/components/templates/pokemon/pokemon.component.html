@@ -1,4 +1,7 @@
-<mat-card [ngClass]="{
+<!-- Com função normal -->
+<mat-card
+  *ngIf="false"
+  [ngClass]="{
     'card-grass': this.pokeType.type.name == 'grass',
     'card-fire': this.pokeType.type.name == 'fire',
     'card-water': this.pokeType.type.name == 'water',
@@ -8,24 +11,38 @@
     'card-normal': this.pokeType.type.name == 'normal',
     'card-electric': this.pokeType.type.name == 'electric',
     'card-ground': this.pokeType.type.name == 'ground'
-}">
-    <section class="content-card" [ngClass]="{
-        'grass': this.pokeType.type.name == 'grass',
-        'fire': this.setClass('fire'),
-        'fire-flying': this.setClass('fire', 'flying'),
-        'water': this.pokeType.type.name == 'water',
-        'bug': this.pokeType.type.name == 'bug',
-        'poison': this.pokeType.type.name == 'poison',
-        'flying': this.pokeType.type.name == 'flying',
-        'normal': this.pokeType.type.name == 'normal',
-        'electric': this.pokeType.type.name == 'electric',
-        'ground': this.pokeType.type.name == 'ground'
-            }">
-        <div class="content-img">
-            <img [src]="pokemon.sprites?.front_default" [alt]="pokemon.name">
-        </div>
-        <h3>{{pokemon?.name}}</h3>
-         <!-- <span *ngFor="let type of pokemon.types">{{type.type.name}}</span> -->
-    </section>
+  }"
+>
+  <section
+    class="content-card"
+    [ngClass]="{
+      'grass': this.pokeType.type.name == 'grass',
+      'fire': this.setClass('fire'),
+      'fire-flying': this.setClass('fire', 'flying'),
+      'water': this.pokeType.type.name == 'water',
+      'bug': this.pokeType.type.name == 'bug',
+      'poison': this.pokeType.type.name == 'poison',
+      'flying': this.pokeType.type.name == 'flying',
+      'normal': this.pokeType.type.name == 'normal',
+      'electric': this.pokeType.type.name == 'electric',
+      'ground': this.pokeType.type.name == 'ground'
+    }"
+  >
+    <div class="content-img">
+      <img [src]="pokemon.sprites?.front_default" [alt]="pokemon.name" />
+    </div>
+    <h3>{{ pokemon?.name }}</h3>
+    <span *ngFor="let type of pokemon.types">{{ type.type.name }}</span>
+  </section>
 </mat-card>
 
+<!-- * Com PIPE -->
+<mat-card *ngIf="true" class="{{ pokemon.types | setStyleBehavior: 'class-card' }}">
+  <section class="content-card {{ pokemon.types | setStyleBehavior: 'class-molding' }}">
+    <div class="content-img">
+      <img [src]="pokemon.sprites?.front_default" [alt]="pokemon.name" />
+    </div>
+    <h3>{{ pokemon?.name }}</h3>
+    <span *ngFor="let type of pokemon.types">{{ type.type.name }}</span>
+  </section>
+</mat-card>

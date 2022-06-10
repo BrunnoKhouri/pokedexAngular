@@ -13,23 +13,29 @@ import { PokemonComponent } from './components/templates/pokemon/pokemon.compone
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+
+import { PipesModule } from './components/pipes/pipes.module';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PokemonListComponent,
     BodyComponent,
-    PokemonComponent
+    PokemonComponent,
   ],
   imports: [
+    // Material
     BrowserModule,
+    MatCardModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatCardModule
+    BrowserAnimationsModule,
+
+    // Others
+    PipesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
